@@ -348,7 +348,18 @@ namespace AquaMai.Core.Resources {
                 return ResourceManager.GetString("SpeedUp", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to Keep\nSpeed.
+        /// </summary>
+        public static string KeepSpeed
+        {
+            get
+            {
+                return ResourceManager.GetString("KeepSpeed", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Touch panel reset.
         /// </summary>

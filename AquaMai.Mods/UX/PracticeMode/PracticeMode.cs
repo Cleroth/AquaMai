@@ -198,9 +198,12 @@ public class PracticeMode
     [HarmonyPostfix]
     public static void GameProcessPostUpdate(GameProcess __instance, GameMonitor[] ____monitors)
     {
-        if (KeyListener.GetKeyDownOrLongPress(key, longPress) && ui is null)
+        if (KeyListener.GetKeyDownOrLongPress(key, longPress))
         {
-            ui = ____monitors[0].gameObject.AddComponent<PracticeModeUI>();
+            if(ui is null)
+                ui = ____monitors[0].gameObject.AddComponent<PracticeModeUI>();
+            else
+                PracticeModeUI.settingsMode = !PracticeModeUI.settingsMode;
         }
 
         if (repeatStart >= 0 && repeatEnd >= 0)

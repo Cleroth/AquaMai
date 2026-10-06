@@ -14,17 +14,17 @@ public class JudgeAdjust
     [ConfigEntry(
         en: "Adjust A judgment.",
         zh: "调整 A 判")]
-    private static readonly double a = 0;
+    public static double a = 0;
 
     [ConfigEntry(
         en: "Adjust B judgment.",
         zh: "调整 B 判")]
-    private static readonly double b = 0;
+    public static double b = 0;
 
     [ConfigEntry(
         en: "Increase touch delay.",
         zh: "增加触摸延迟")]
-    private static readonly uint touchDelay = 0;
+    public static uint touchDelay = 0;
 
     [HarmonyPostfix]
     [HarmonyPatch(typeof(UserOption), "GetAdjustMSec")]
