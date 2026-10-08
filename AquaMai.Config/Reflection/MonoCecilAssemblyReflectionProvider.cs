@@ -152,6 +152,7 @@ public class MonoCecilReflectionProvider : IReflectionProvider
                         TypeCode.UInt32 => unchecked((uint)bits),
                         TypeCode.Int64 => bits,
                         TypeCode.UInt64 => unchecked((ulong)bits),
+                        TypeCode.Char => unchecked((char)bits),
                         _ => loadOperand,
                     };
                 }
