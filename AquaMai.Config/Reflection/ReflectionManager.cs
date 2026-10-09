@@ -144,7 +144,6 @@ public class ReflectionManager : IReflectionManager
 
     public IReflectionManager.ISection GetSection(Type type)
     {
-        // By type: TryGetSection(type.FullName) would look the full name up as a section path and always fail
         if (!TryGetSection(type, out var section))
         {
             throw new KeyNotFoundException($"Section {type.FullName} not found");
